@@ -1,7 +1,7 @@
 
 type ButtonProps = {
-  label?: string,
-  children?: string,
+  label?    : string,
+  children? : string,
 };
 
 export function Button(props: ButtonProps) {
