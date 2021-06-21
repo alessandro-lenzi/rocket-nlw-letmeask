@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# RocketSeat NLW 2021 - LetMeAsk Web App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
