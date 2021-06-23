@@ -7,9 +7,9 @@ type AuthContextType = {
 };
 
 type User = {
-  id: string;
-  name: string;
-  avatar: string;
+  id        : string;
+  name      : string;
+  avatar    : string;
 };
 
 type AuthContextProviderProps = {
@@ -53,6 +53,10 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
 
     const result = await auth.signInWithPopup(provider);
     setUserData(result.user);
+  }
+
+  async function signOut() {
+    await auth.signOut();
   }
 
   return (
