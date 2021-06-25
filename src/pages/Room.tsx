@@ -6,7 +6,7 @@ import { Button } from '../components/Button';
 import { Question } from '../components/Question';
 import { RoomCode } from '../components/RoomCode';
 import { useAuth } from '../hooks/useAuth';
-import { QuestionType, useRoom } from '../hooks/useRoom';
+import { useRoom } from '../hooks/useRoom';
 import { database } from '../services/firebase';
 
 import '../styles/room.scss';
@@ -102,8 +102,11 @@ export function Room() {
                 key={question.id}
                 content={question.content}
                 author={question.author}
+                isAnswered={question.isAnswered}
+                isHighlighted={question.isHighlighted}
               >
                 <button
+                  disabled={question.isAnswered}
                   className={`like-button ${!!question.likeId ? 'liked' : ''}`}
                   type="button"
                   aria-label="Gostei"

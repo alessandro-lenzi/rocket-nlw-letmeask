@@ -4,28 +4,28 @@ import { useAuth } from "./useAuth";
 
 export type BaseQuestions = Record<string, {
   author: {
-    name: string;
-    avatar: string;
+    name        : string;
+    avatar      : string;
   }
-  content: string;
-  isAnswered: boolean;
-  isHighlighted: boolean;
+  content       : string;
+  isAnswered    : boolean;
+  isHighlighted : boolean;
   likes: Record<string, {
-    authorId: string;
+    authorId    : string;
   }>
 }>;
 
 export type QuestionType = {
-  id: string,
+  id            : string,
   author: {
-    name: string;
-    avatar: string;
+    name        : string;
+    avatar      : string;
   }
-  content: string;
-  isAnswered: boolean;
-  isHighlighted: boolean;
-  likesCount: number;
-  likeId: string | undefined;
+  content       : string;
+  isAnswered    : boolean;
+  isHighlighted : boolean;
+  likesCount    : number;
+  likeId        : string | undefined;
 };
 
 export function useRoom(roomId: string) {
@@ -50,6 +50,10 @@ export function useRoom(roomId: string) {
           likeId          : Object.entries(value.likes ?? {})
                               .find(([key, like]) => like.authorId === user?.id)?.[0],
         };
+      });
+
+      entries.sort((a, b) => {
+        return b.likesCount - a.likesCount;
       });
 
       setTitle(roomVal.title);
