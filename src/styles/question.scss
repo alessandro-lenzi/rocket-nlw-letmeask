@@ -25,16 +25,20 @@
   }
 
   &.answered {
-    background-color: #dbdcdd;
+    background-color: #eee;
     border: 1px solid #dbdcdd;
 
     footer .user-info span {
-      color: #29292e;
+      color: #888;
     }
 
     footer button.answered-button svg path,
     footer button.answered-button svg circle {
       stroke: #5aad83;
+    }
+
+    p {
+      color: #888;
     }
   }
 

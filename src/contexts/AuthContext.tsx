@@ -30,9 +30,9 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
       }
 
       setUser({
-        id: uid,
-        name: displayName,
-        avatar: photoURL
+        id        : uid,
+        name      : displayName,
+        avatar    : photoURL
       });
     }
   }

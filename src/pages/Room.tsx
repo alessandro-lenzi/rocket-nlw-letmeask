@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react';
+import { createRef, FormEvent, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import logoImg from '../assets/images/logo.svg';
@@ -104,6 +104,7 @@ export function Room() {
                 author={question.author}
                 isAnswered={question.isAnswered}
                 isHighlighted={question.isHighlighted}
+                domRef={createRef()}
               >
                 <button
                   disabled={question.isAnswered}
@@ -123,7 +124,6 @@ export function Room() {
             );
           })}
         </div>
-
 
       </main>
 

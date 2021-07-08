@@ -10,6 +10,7 @@ import { useRoom } from '../hooks/useRoom';
 
 import '../styles/room.scss';
 import { database } from '../services/firebase';
+import { createRef } from 'react';
 
 type RoomParams = {
   id: string;
@@ -80,6 +81,7 @@ export function AdminRoom() {
                 author={question.author}
                 isAnswered={question.isAnswered}
                 isHighlighted={question.isHighlighted}
+                domRef={createRef()}
               >
                 <button
                   className="answered-button"
