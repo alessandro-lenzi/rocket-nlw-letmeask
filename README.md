@@ -1,5 +1,16 @@
 # RocketSeat NLW 2021 - LetMeAsk Web App
 
+##### An exercise on React.JS from RocketSeat NLW 2021
+
+> **Note:** I made it so the questions are reordered according to its likes count, where the ones with more votes go to the top, and so on. To make the animation working was a real challenge and after giving up 3 times, I was able to make it work. This animation feature was inspired by a code from [Tara Ojo's snippet](https://codesandbox.io/s/reorder-elements-with-slide-transition-and-react-hooks-flip-211f2), but it's not on TypeScript, and because of that it was a challenge, as there were some conceptual problems when converting to it.
+
+Se the result demo below:
+
+![LetMeAsk](./src/assets/images/demo.gif)
+
+---
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
